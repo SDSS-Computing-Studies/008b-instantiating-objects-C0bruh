@@ -102,3 +102,8 @@ def menu():
     return int(x)
 
 pets = []
+
+x = menu()
+while x != 3:
+    if x == 1:
+        pets.append(pet))
