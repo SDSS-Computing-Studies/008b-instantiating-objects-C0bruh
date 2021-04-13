@@ -107,3 +107,10 @@ x = menu()
 while x != 3:
     if x == 1:
         pets.append(pet))
+    elif x ==2:
+        petN = input("Which pet? :")
+        for i in pets:
+            if petN == i.name:
+                pet.display(i)
+
+        x = menu()
