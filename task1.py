@@ -98,8 +98,9 @@ def menu():
     print("[1] Enter a new pet")
     print("[2] Retreive a pet")
     print("[3] Exit")
-    x = input("What would you like to do? :")
-    return int(x)
+    
+    choice = input("What would you like to do? :")
+    return int(choice)
 
 pets = []
 
