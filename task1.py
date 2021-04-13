@@ -93,3 +93,12 @@ class pet:
         print("Name: " + self.name)
         print("Owner: " + self.owner)
         print("Bday: " +self.bday)
+
+def menu():
+    print("[1] Enter a new pet")
+    print("[2] Retreive a pet")
+    print("[3] Exit")
+    x = input("What would you like to do? :")
+    return int(x)
+
+pets = []
