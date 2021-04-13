@@ -60,7 +60,7 @@ Type of animal? cat
 Breed? Domestic Long Hair
 Name? Casey
 Owner? Chris
-Birthdate? 20015-10-01
+Birthdate? 2015-10-01
 
 1. Enter a new pet
 2. Retrieve a pet
@@ -86,3 +86,10 @@ class pet:
         self.name = input("Whats it's name? :")
         self.owner = input("Who is the owner? :")
         self.bday = input("When is it's birthday :")
+
+    def display(self):
+        print("Name: " + self.name)
+        print("Breed: " + self.breed)
+        print("Name: " + self.name)
+        print("Owner: " + self.owner)
+        print("Bday: " +self.bday)
