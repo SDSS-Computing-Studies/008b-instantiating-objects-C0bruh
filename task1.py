@@ -73,3 +73,16 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
+class pet:
+    animal = None
+    Breed = None
+    name = None
+    owner = None
+    bday = None
+
+    def __init__(self):
+        self.animal = input("What kind of animal? :")
+        self.breed = input("What is the breed? :")
+        self.name = input("Whats it's name? :")
+        self.owner = input("Who is the owner? :")
+        self.bday = input("When is it's birthday :")
