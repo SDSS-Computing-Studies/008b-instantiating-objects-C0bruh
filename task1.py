@@ -92,7 +92,7 @@ class pet:
         print("Breed: " + self.breed)
         print("Name: " + self.name)
         print("Owner: " + self.owner)
-        print("Bday: " +self.bday)
+        print("Bday: " + self.bday)
 
 def menu():
     print("[1] Enter a new pet")
