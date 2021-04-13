@@ -60,4 +60,3 @@ for i in range(0,3):
 # or methods
 print( cars[0].make )
 print( cars[1].curvalue() )
-s
