@@ -103,14 +103,14 @@ def menu():
 
 pets = []
 
-x = menu()
-while x != 3:
-    if x == 1:
+choice = menu()
+while choice != 3:
+    if choice == 1:
         pets.append(pet))
-    elif x ==2:
-        petN = input("Which pet? :")
+    elif choice ==2:
+        petName = input("Which pet? :")
         for i in pets:
-            if petN == i.name:
+            if petName == i.name:
                 pet.display(i)
 
-        x = menu()
+        choice = menu()
