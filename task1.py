@@ -94,7 +94,6 @@ class pet:
         print("Type:" + self.animal)
         print("Breed:" + self.breed)
         print("Owner:" + self.owner)
-        print("Bday:" + self.bday)
 
 
 def menu():
