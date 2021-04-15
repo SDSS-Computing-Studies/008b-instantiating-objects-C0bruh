@@ -83,25 +83,25 @@ class pet:
     bday = None
 
     def __init__(self):
-        self.animal = input("What kind of animal? : ")
-        self.breed = input("What is the breed? : ")
-        self.name = input("Whats it's name? : ")
-        self.owner = input("Who is the owner? : ")
-        self.bday = input("Whats it's birthday? : ")
+        self.animal = input("What kind of animal? :")
+        self.breed = input("What is the breed? :")
+        self.name = input("Whats it's name? :")
+        self.owner = input("Who is the owner? :")
+        self.bday = input("Whats it's birthday? :")
 
     def display(self):
-        print("Name: " + self.name)
-        print("Type: " + self.animal)
-        print("Breed: " + self.breed)
-        print("Owner: " + self.owner)
-        print("Bday: " + self.bday)
+        print("Name:" + self.name)
+        print("Type:" + self.animal)
+        print("Breed:" + self.breed)
+        print("Owner:" + self.owner)
+        print("Bday:" + self.bday)
 
 
 def menu():
     print("[1] Enter a new pet")
     print("[2] Retrieve a pet")
     print("[3] Exit")
-    x = input("What would you like to do? : ")
+    x = input("What would you like to do? :")
     return int(x)
 
 
@@ -112,7 +112,7 @@ while x != 3:
     if x == 1:
         pets.append(pet())
     elif x == 2:
-        petN = input("Which Pet? : ")
+        petN = input("Which Pet? :")
         for i in pets:
             if petN == i.name:
                 pet.display(i)
