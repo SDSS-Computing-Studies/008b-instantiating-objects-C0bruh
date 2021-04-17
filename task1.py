@@ -76,43 +76,61 @@ Shih-tzu is owned by Christy
 
 
 class pet:
-    animal = None
+    type_pet = None
     breed = None
     name = None
     owner = None
     bday = None
 
-    def __init__(self):
-        self.animal = input("What kind of animal? :")
-        self.breed = input("What is the breed? :")
-        self.name = input("Whats it's name? :")
-        self.owner = input("Who is the owner? :")
-        self.bday = input("Whats it's birthday? :")
+    def __init__(self, type_pet, breed, name, owner, bday):
+        self.type_pet = type_pet
+        self.breed = breed
+        self.name = name
+        self.owner = owner
+        self.bday = bday
 
     def display(self):
-        print("Name:" + self.name)
-        print("Type:" + self.animal)
-        print("Breed:" + self.breed)
-        print("Owner:" + self.owner)
+        print(self.name + " " + self.type_pet)
+        print(self.breed + "  is owned by " + self.owner)
 
 
-def menu():
-    print("[1] Enter a new pet")
-    print("[2] Retrieve a pet")
-    print("[3] Exit")
-    x = input("What would you like to do? :")
-    return int(x)
+def display_menu():
+    print("1. Enter a new pet")
+    print("2. Retrieve a pet")
+    print("3. Exit")
 
+def register_new_pet():
+    print("Type of animal?", end=" ")
+    type_pet = input()
+    print("Breed?", end=" ")
+    breed = input()
+    print("Name?", end=" ")
+    name = input()
+    print("Owner?", end=" ")
+    owner = input()
+    print("Birthdate?", end=" ") 
+    bday = input()
+    p = pet(type_pet, breed, name, owner, bday)
+    return p
 
-pets = []
+def retrieve_pet(pet_list):
+    print("Which Pet?", end=" ")
+    name = input()
+    for p in pet_list:
+        if p.name == name:
+            p.display()
 
-x = menu()
-while x != 3:
-    if x == 1:
-        pets.append(pet())
-    elif x == 2:
-        petN = input("Which Pet? :")
-        for i in pets:
-            if petN == i.name:
-                pet.display(i)
-    x = menu()
+def main():
+    pet_list = []
+    while True:
+        display_menu()
+        option = input()
+        print()
+        if option == "3":
+            break
+        elif option == "2": 
+            retrieve_pet(pet_list)
+        elif option == "1": 
+            pet_list.append(register_new_pet()) 
+
+main()
